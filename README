@@ -1,0 +1,1 @@
+Please note for security the .MacMigrator.conf file is not included in the xcode build folder. You will need to retreive this from a production copy of the application if you wish to rebuild the package installer from source.

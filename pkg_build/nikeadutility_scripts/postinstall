@@ -1,0 +1,30 @@
+#!/bin/bash
+# Postflight script for Open Directory Backup Installer
+declare -x chown="/usr/sbin/chown"
+declare -x chmod="/bin/chmod"
+declare -x launchctl="/bin/launchctl"
+
+declare -x PLIST_ID="com.nike.ad.utility"
+declare -x PLIST_PATH="/Library/LaunchDaemons/${PLIST_ID:?}.plist"
+#declare -x INSTALL_SCRIPT="odbackup"
+#declare -x INSTALL_PATH="/usr/local/sbin"
+
+if [ ! -f "${PLIST_PATH:?}" ] ; then
+	echo "PLIST is missing at path: $PLIST_PATH"
+	exit 1
+fi
+
+# Secure the install items ( good measure )
+$chown 0:0 \
+        "$PLIST_PATH" 	
+$chmod 755 \
+        "$PLIST_PATH"  
+
+# Load the launchd plist
+if [ -f "$PLIST_PATH" ] ; then
+	$launchctl load -w "$PLIST_PATH"
+fi
+
+# Run the script and create a backup on the spot
+#echo "Running first run of script..."
+#exec "$INSTALL_PATH/$INSTALL_SCRIPT"
