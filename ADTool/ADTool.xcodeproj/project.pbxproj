@@ -85,11 +85,11 @@
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		256AC3D80F4B6AC300CF3369 /* PasswordUtilityAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordUtilityAppDelegate.h; sourceTree = "<group>"; };
 		256AC3D90F4B6AC300CF3369 /* PasswordUtilityAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordUtilityAppDelegate.m; sourceTree = "<group>"; };
-		256AC3F00F4B6AF500CF3369 /* ADTool_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; path = ADTool_Prefix.pch; sourceTree = "<group>"; };
+		256AC3F00F4B6AF500CF3369 /* ADTool_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADTool_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		8D1107310486CEB800E47090 /* ADTool-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; path = "ADTool-Info.plist"; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* ADTool-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ADTool-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* ADTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E103C1AD147C509A00155809 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E103C41B147C777A00155809 /* PasswordUtilityHelper */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = PasswordUtilityHelper; sourceTree = "<group>"; };
@@ -623,6 +623,7 @@
 				INFOPLIST_FILE = "ADTool-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = ADTool;
+				SDKROOT = macosx10.7;
 			};
 			name = Debug;
 		};
@@ -637,6 +638,7 @@
 				INFOPLIST_FILE = "ADTool-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = ADTool;
+				SDKROOT = macosx10.7;
 			};
 			name = Release;
 		};
